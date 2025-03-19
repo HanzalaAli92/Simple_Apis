@@ -25,7 +25,7 @@ st.markdown(
 )
 
 # FastAPI Backend URL
-API_BASE_URL = "http://127.0.0.1:8000"
+API_BASE_URL = "http://127.0.0.1:8000/"
 
 # Title
 st.markdown("<h1 class='title'>💰 Side Hustles & Money Quotes 💡</h1>", unsafe_allow_html=True)
