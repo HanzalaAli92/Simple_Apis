@@ -25,7 +25,7 @@ st.markdown(
 )
 
 # FastAPI Backend URL
-API_BASE_URL = "http://127.0.0.1:8000/"
+API_BASE_URL = "http://127.0.0.1:8000"
 
 # Title
 st.markdown("<h1 class='title'>💰 Side Hustles & Money Quotes 💡</h1>", unsafe_allow_html=True)
@@ -37,7 +37,7 @@ col1, col2 = st.columns(2)
 with col1:
     st.markdown("### 🚀 Side Hustle Idea")
     if st.button("Get a Side Hustle Idea"):
-        response = requests.get(f"{API_BASE_URL}/side_hustles")
+        response = requests.get(f"{API_BASE_URL}http://127.0.0.1:8000/side_hustles")
         if response.status_code == 200:
             hustle = response.json().get("side_hustle", "No hustle found")
             st.markdown(f"<div class='hustle-box'><h3>{hustle}</h3></div>", unsafe_allow_html=True)
@@ -48,7 +48,7 @@ with col1:
 with col2:
     st.markdown("### 💸 Money Quote")
     if st.button("Get a Money Quote"):
-        response = requests.get(f"{API_BASE_URL}/money_quotes")
+        response = requests.get(f"{API_BASE_URL}http://127.0.0.1:8000/money_quotes")
         if response.status_code == 200:
             quote = response.json().get("money_quote", "No quote found")
             st.markdown(f"<div class='quote-box'><h3>📢 {quote}</h3></div>", unsafe_allow_html=True)
